@@ -1,0 +1,4 @@
+MODEL_NAME = "yolov8n-oiv7.pt"
+
+CONF_THRESHOLD = 0.25
+IMG_SIZE = 640
