@@ -3,11 +3,11 @@ import shutil
 
 from ultralytics import YOLO
 
-from config import MODEL_NAME
+from server.config import MODEL_NAME
 from paths import MODELS_PATH
 
 
-def download_weights():
+def download_weights() -> None:
     model = YOLO(MODEL_NAME)
     os.makedirs(MODELS_PATH, exist_ok=True)
     shutil.move(model.ckpt_path, os.path.join(MODELS_PATH, MODEL_NAME))
